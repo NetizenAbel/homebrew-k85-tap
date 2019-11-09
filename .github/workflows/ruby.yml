@@ -21,5 +21,4 @@ jobs:
         cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
         brew cask audit time-to-leave --download
         brew cask install time-to-leave
-        brew cask style Casks/time-to-leave.rb --fix
-        
+        brew cask uninstall time-to-leave 
