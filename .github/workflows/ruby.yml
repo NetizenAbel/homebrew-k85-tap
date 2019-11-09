@@ -1,0 +1,27 @@
+name: Ruby
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+    - name: Build and test with Rake
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake
+        export HOMEBREW_NO_AUTO_UPDATE=1
+        brew tap kashaiahyah85/time-to-leave
+        brew cask install time-to-leave
+        brew cask audit time-to-leave --download
+        cd "$(brew --repository)"/Library/Taps/homebrew/time-to-leave
+        brew cask style Casks/time-to-leave.rb --fix
+        
