@@ -1,6 +1,6 @@
 name: Ruby
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -13,15 +13,12 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
-    - name: Build and test with Rake
+    - name: Testy
       run: |
         gem install bundler
-        bundle install --jobs 4 --retry 3
-        bundle exec rake
         export HOMEBREW_NO_AUTO_UPDATE=1
-        brew tap kashaiahyah85/time-to-leave
-        brew cask install time-to-leave
+        brew tap kashaiahyah85/homebrew-cask
+        cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
         brew cask audit time-to-leave --download
-        cd "$(brew --repository)"/Library/Taps/homebrew/time-to-leave
-        brew cask style Casks/time-to-leave.rb --fix
-        
+        brew cask install time-to-leave
+        brew cask uninstall time-to-leave 

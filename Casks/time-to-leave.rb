@@ -4,7 +4,7 @@ cask 'time-to-leave' do
 
   url "https://github.com/thamara/time-to-leave/releases/download/v.#{version}/Time.to.Leave-macOS-x64.zip"
   appcast 'https://github.com/thamara/time-to-leave/releases.atom'
-  name 'time-to-leave'
+  name "time-to-leave"
   homepage 'https://github.com/thamara/time-to-leave'
 
   app 'Time to Leave-macOS-x64/Time to Leave.app'
