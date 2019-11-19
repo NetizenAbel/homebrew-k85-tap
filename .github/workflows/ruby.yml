@@ -3,22 +3,17 @@ name: Ruby
 on: [push, pull_request]
 
 jobs:
-  build:
+  test:
 
     runs-on: macOS-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6.x
     - name: Testy
       run: |
         gem install bundler
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew tap kashaiahyah85/homebrew-k85-tap
-        cd "$(brew --repository)"/Library/Taps/kashaiahyah85/k85-tap
+        cd "$(brew --repository)"/Library/Taps/kashaiahyah85/homebrew-k85-tap
         brew cask audit time-to-leave --download
         brew cask install time-to-leave
         brew cask uninstall time-to-leave 
