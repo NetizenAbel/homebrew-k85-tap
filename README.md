@@ -2,8 +2,9 @@ kashaiahyah85/homebrew-k85-tap
 ===================
 
 Casks of this tap are for apps that I work on or frequently need. 
-> **IMPORTANT:** They are generally unsigned,
-so you will need to allow the apps in your security settings.
+
+> **IMPORTANT:** These are generally unsigned,
+so you [will need to allow the app](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/the_app_cant_be_opened.md)s in your security settings.
 
 Usage
 =====
