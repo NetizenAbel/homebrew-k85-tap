@@ -16,5 +16,5 @@ jobs:
         cd "$(brew --repository)"/Library/Taps/kashaiahyah85/homebrew-k85-tap
         brew cask audit time-to-leave --download
         brew cask install time-to-leave
-        brew cask uninstall time-to-leave || exit 0
-        exit 1 
+        brew cask uninstall time-to-leave
+        exit 0 
