@@ -4,13 +4,8 @@ cask 'time-to-leave' do
 
   url "https://github.com/thamara/time-to-leave/releases/download/v.#{version}/Time.to.Leave-macOS-x64.zip"
   appcast 'https://github.com/thamara/time-to-leave/releases.atom'
-  name "time-to-leave"
+  name "Time to Leave"
   homepage 'https://github.com/thamara/time-to-leave'
 
   app 'Time to Leave-macOS-x64/Time to Leave.app'
-
-  zap trash: [
-               '~/Library/Preferences/com.electron.time-to-leave.plist',
-               '~/Library/Saved Application State/com.electron.time-to-leave.savedState',
-             ]
 end
