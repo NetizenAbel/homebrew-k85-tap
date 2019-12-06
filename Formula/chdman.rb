@@ -6,7 +6,7 @@ class Chdman < Formula
   bottle :unneeded
   
   def install
-    bin.install "chdman"
+    bin.install "chdman" "${bin}/chdman"
     bin.env_script_all_files("#{bin}")
   end
 
