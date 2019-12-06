@@ -1,4 +1,4 @@
-name: CI
+name: Test Taps
 
 on: [push, pull_request]
 
@@ -8,13 +8,19 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-    - name: Testy
+    - name: tapping
       run: |
         gem install bundler
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew tap kashaiahyah85/homebrew-k85-tap
         cd "$(brew --repository)"/Library/Taps/kashaiahyah85/homebrew-k85-tap
+    - name: chdman
+      run: |
+        brew audit chdman --download
+        brew install chdman
+        brew uninstall chdman
+    - name: time-to-leave
         brew cask audit time-to-leave --download
         brew cask install time-to-leave
         brew cask uninstall time-to-leave
-        exit 0 
+
