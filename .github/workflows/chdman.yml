@@ -8,16 +8,16 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-    - name: tapping
+    - name: tapping k85-tap
       run: |
-        gem install bundler
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew tap kashaiahyah85/homebrew-k85-tap
         cd "$(brew --repository)"/Library/Taps/kashaiahyah85/homebrew-k85-tap
         
-    - name: testing chdman
+    - name: installing chdman
       run: |
         brew install chdman
         which chdman
-        chdman || exit 0
-        brew uninstall chdman
+        
+    - name: uninstalling chdman
+      run: brew uninstall chdman
