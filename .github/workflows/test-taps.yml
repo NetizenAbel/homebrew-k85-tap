@@ -14,10 +14,13 @@ jobs:
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew tap kashaiahyah85/homebrew-k85-tap
         cd "$(brew --repository)"/Library/Taps/kashaiahyah85/homebrew-k85-tap
+        
     - name: testing chdman
       run: |
         brew install chdman
+        which chdman
         brew uninstall chdman
+        
     - name: testing time-to-leave
       run: |
         brew cask install time-to-leave
