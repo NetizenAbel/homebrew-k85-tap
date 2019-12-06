@@ -19,6 +19,7 @@ jobs:
       run: |
         brew install chdman
         which chdman
+        chdman --version
         brew uninstall chdman
         
     - name: testing time-to-leave
