@@ -20,6 +20,7 @@ jobs:
         brew install chdman
         brew uninstall chdman
     - name: time-to-leave
+      run: |
         brew cask audit time-to-leave --download
         brew cask install time-to-leave
         brew cask uninstall time-to-leave
