@@ -18,4 +18,4 @@ jobs:
     - name: testing time-to-leave
       run: |
         brew cask install time-to-leave
-        brew uninstall chdman
+        brew uninstall time-to-leave
