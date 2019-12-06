@@ -16,12 +16,12 @@ jobs:
         cd "$(brew --repository)"/Library/Taps/kashaiahyah85/homebrew-k85-tap
     - name: chdman
       run: |
-        brew audit chdman --download
+        brew audit chdman
         brew install chdman
         brew uninstall chdman
     - name: time-to-leave
       run: |
-        brew cask audit time-to-leave --download
+        brew cask audit time-to-leave
         brew cask install time-to-leave
         brew cask uninstall time-to-leave
 
