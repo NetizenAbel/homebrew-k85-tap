@@ -10,7 +10,6 @@ jobs:
     steps:
     - name: tapping
       run: |
-        gem install bundler
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew tap kashaiahyah85/homebrew-k85-tap
         cd "$(brew --repository)"/Library/Taps/kashaiahyah85/homebrew-k85-tap
@@ -18,4 +17,4 @@ jobs:
     - name: testing time-to-leave
       run: |
         brew cask install time-to-leave
-        brew uninstall time-to-leave
+        brew cask uninstall time-to-leave
