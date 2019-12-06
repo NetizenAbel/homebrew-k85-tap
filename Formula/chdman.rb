@@ -1,7 +1,8 @@
 class Chdman < Formula
   desc "MAME CHDMAN binary"
+  version "0.216"
   homepage "https://www.advancemame.it/"
-  url "https://github.com/kashaiahyah85/chdman/archive/chdman.zip"
+  url "https://github.com/kashaiahyah85/chdman/releases/download/#{version}/chdman.zip"
   sha256 "797cc69e2f067a11ee99cc94ee59bbe1b1dd99f3c82fa8f2d3ab6e2b5d5fb475"
 
   bottle do
